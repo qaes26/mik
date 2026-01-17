@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اختبار مراجعة نظم المعلومات - قيس جازي</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 20px;
+        }
+
+        h1 {
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .question-card {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            transition: transform 0.2s;
+        }
+
+        .question-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        }
+
+        .question-text {
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            cursor: pointer;
+        }
+
+        .answer-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-family: 'Tajawal', sans-serif;
+            font-size: 0.9em;
+            margin-top: 10px;
+        }
+
+        .answer-btn:hover {
+            background-color: #218838;
+        }
+
+        .answer-reveal {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f5e9;
+            border-right: 4px solid #28a745;
+            color: #155724;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #ddd;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .section-title {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>بنك أسئلة مراجعة نظم المعلومات</h1>
+        <p class="subtitle">أسئلة شاملة حول البنية التحتية، المعوقات، والرسوم البيانية</p>
+    </header>
+
+    <div class="section-title">أولاً: الرسوم البيانية (Charts)</div>
+
+    <div class="question-card">
+        <div class="question-text">1. ما هو الرسم البياني الأفضل لتوضيح الاتجاهات (Trends) عبر الزمن؟</div>
+        <div class="options">
+            <label><input type="radio" name="q1"> أ) الأعمدة (Column)</label>
+            <label><input type="radio" name="q1"> ب) الدوائر (Pie)</label>
+            <label><input type="radio" name="q1"> ج) المنحنى (Line)</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a1')">إظهار الإجابة</button>
+        <div id="a1" class="answer-reveal">الإجابة الصحيحة: ج) المنحنى (Line). لأنه يوضح الصعود والهبوط عبر الزمن.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">2. لإظهار النسبة المئوية أو حصة الشركة من السوق، نستخدم:</div>
+        <div class="options">
+            <label><input type="radio" name="q2"> أ) الدوائر (Pie)</label>
+            <label><input type="radio" name="q2"> ب) الأعمدة (Column)</label>
+            <label><input type="radio" name="q2"> ج) المنحنى (Line)</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a2')">إظهار الإجابة</button>
+        <div id="a2" class="answer-reveal">الإجابة الصحيحة: أ) الدوائر (Pie). لأنها تمثل حصة من الكل.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">3. تُستخدم الأعمدة (Column Charts) بشكل أساسي لـ:</div>
+        <div class="options">
+            <label><input type="radio" name="q3"> أ) توضيح نسب مئوية فقط</label>
+            <label><input type="radio" name="q3"> ب) المقارنة بين فئات تفصيلية مختلفة</label>
+            <label><input type="radio" name="q3"> ج) توضيح اتجاه الأرباح خلال سنة</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a3')">إظهار الإجابة</button>
+        <div id="a3" class="answer-reveal">الإجابة الصحيحة: ب) المقارنة بين فئات تفصيلية مختلفة.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">4. لمعرفة هل البيانات في "صعود" أم "هبوط" (مثل تغير الأرباح)، نستخدم:</div>
+        <div class="options">
+            <label><input type="radio" name="q4"> أ) المنحنى (Line)</label>
+            <label><input type="radio" name="q4"> ب) الدوائر (Pie)</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a4')">إظهار الإجابة</button>
+        <div id="a4" class="answer-reveal">الإجابة الصحيحة: أ) المنحنى (Line).</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">5. الرسم الذي يمثل "جزء من الكل" هو:</div>
+        <div class="options">
+            <label><input type="radio" name="q5"> أ) الأعمدة</label>
+            <label><input type="radio" name="q5"> ب) الدوائر</label>
+            <label><input type="radio" name="q5"> ج) النقاط</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a5')">إظهار الإجابة</button>
+        <div id="a5" class="answer-reveal">الإجابة الصحيحة: ب) الدوائر.</div>
+    </div>
+
+    <div class="section-title">ثانياً: البنية التحتية لنظم المعلومات</div>
+
+    <div class="question-card">
+        <div class="question-text">6. تتكون البنية التحتية لتكنولوجيا المعلومات من:</div>
+        <div class="options">
+            <label><input type="radio" name="q6"> أ) الأجهزة فقط</label>
+            <label><input type="radio" name="q6"> ب) البرمجيات والشبكات فقط</label>
+            <label><input type="radio" name="q6"> ج) الأجهزة، البرمجيات، الشبكات، والبيانات</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a6')">إظهار الإجابة</button>
+        <div id="a6" class="answer-reveal">الإجابة الصحيحة: ج) الأجهزة، البرمجيات، الشبكات، والبيانات.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">7. تشمل أجهزة الحاسوب (Hardware) في البنية التحتية:</div>
+        <div class="options">
+            <label><input type="radio" name="q7"> أ) الحواسيب الشخصية فقط</label>
+            <label><input type="radio" name="q7"> ب) خليطاً من الحواسيب الشخصية، المتوسطة، والخوادم (Servers)</label>
+            <label><input type="radio" name="q7"> ج) البرامج المحاسبية</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a7')">إظهار الإجابة</button>
+        <div id="a7" class="answer-reveal">الإجابة الصحيحة: ب) خليطاً من الحواسيب الشخصية، المتوسطة، والخوادم.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">8. العنصر الذي يربط الأجهزة ويسمح لها بالتشابك وتبادل المعلومات هو:</div>
+        <div class="options">
+            <label><input type="radio" name="q8"> أ) الشبكات (Networks)</label>
+            <label><input type="radio" name="q8"> ب) البيانات (Data)</label>
+            <label><input type="radio" name="q8"> ج) الطابعات</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a8')">إظهار الإجابة</button>
+        <div id="a8" class="answer-reveal">الإجابة الصحيحة: أ) الشبكات (Networks).</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">9. (صواب/خطأ) تعتبر "البيانات" جزءاً من مكونات البنية التحتية لنظم المعلومات.</div>
+        <div class="options">
+            <label><input type="radio" name="q9"> أ) صواب</label>
+            <label><input type="radio" name="q9"> ب) خطأ</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a9')">إظهار الإجابة</button>
+        <div id="a9" class="answer-reveal">الإجابة الصحيحة: أ) صواب.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">10. الحواسيب التي تعمل على خدمة أجهزة أخرى وتخزين البيانات تسمى:</div>
+        <div class="options">
+            <label><input type="radio" name="q10"> أ) الحواسيب الشخصية</label>
+            <label><input type="radio" name="q10"> ب) الخوادم (Servers)</label>
+            <label><input type="radio" name="q10"> ج) الهواتف الذكية</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a10')">إظهار الإجابة</button>
+        <div id="a10" class="answer-reveal">الإجابة الصحيحة: ب) الخوادم (Servers).</div>
+    </div>
+
+    <div class="section-title">ثالثاً: المعوقات الفنية (Technical Obstacles)</div>
+
+    <div class="question-card">
+        <div class="question-text">11. أي مما يلي يعتبر من المعوقات الفنية (التقنية)؟</div>
+        <div class="options">
+            <label><input type="radio" name="q11"> أ) مقاومة التغيير</label>
+            <label><input type="radio" name="q11"> ب) قلة الأشخاص المؤهلين في نظم المعلومات</label>
+            <label><input type="radio" name="q11"> ج) سرقة الهوية</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a11')">إظهار الإجابة</button>
+        <div id="a11" class="answer-reveal">الإجابة الصحيحة: ب) قلة الأشخاص المؤهلين في نظم المعلومات.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">12. انخفاض مستوى خريجي الجامعات يعتبر تحدياً يندرج تحت:</div>
+        <div class="options">
+            <label><input type="radio" name="q12"> أ) المعوقات الأمنية</label>
+            <label><input type="radio" name="q12"> ب) المعوقات الفنية/الإدارية</label>
+            <label><input type="radio" name="q12"> ج) المعوقات الثقافية</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a12')">إظهار الإجابة</button>
+        <div id="a12" class="answer-reveal">الإجابة الصحيحة: ب) المعوقات الفنية/الإدارية (الكوادر الفنية).</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">13. عدم كفاية التدريب للموظفين يؤدي إلى معوقات في تطبيق النظم، وهو يتبع للمعوقات:</div>
+        <div class="options">
+            <label><input type="radio" name="q13"> أ) الفنية</label>
+            <label><input type="radio" name="q13"> ب) الأمنية</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a13')">إظهار الإجابة</button>
+        <div id="a13" class="answer-reveal">الإجابة الصحيحة: أ) الفنية.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">14. المقصود بـ "الكوادر الفنية" في المعوقات هو:</div>
+        <div class="options">
+            <label><input type="radio" name="q14"> أ) الأجهزة والمعدات</label>
+            <label><input type="radio" name="q14"> ب) العنصر البشري المؤهل والمدرب</label>
+            <label><input type="radio" name="q14"> ج) سرعة الإنترنت</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a14')">إظهار الإجابة</button>
+        <div id="a14" class="answer-reveal">الإجابة الصحيحة: ب) العنصر البشري المؤهل والمدرب.</div>
+    </div>
+
+    <div class="section-title">رابعاً: المعوقات الثقافية والأمنية</div>
+
+    <div class="question-card">
+        <div class="question-text">15. الثقافة التنظيمية التي لا تشجع على الابتكار تعتبر من:</div>
+        <div class="options">
+            <label><input type="radio" name="q15"> أ) المعوقات الثقافية</label>
+            <label><input type="radio" name="q15"> ب) المعوقات الأمنية</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a15')">إظهار الإجابة</button>
+        <div id="a15" class="answer-reveal">الإجابة الصحيحة: أ) المعوقات الثقافية.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">16. أي مما يلي يمثل معوقاً أمنياً؟</div>
+        <div class="options">
+            <label><input type="radio" name="q16"> أ) صعوبة السيطرة على أمن وسرية المعلومات</label>
+            <label><input type="radio" name="q16"> ب) قلة التدريب</label>
+            <label><input type="radio" name="q16"> ج) نقص الأجهزة</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a16')">إظهار الإجابة</button>
+        <div id="a16" class="answer-reveal">الإجابة الصحيحة: أ) صعوبة السيطرة على أمن وسرية المعلومات.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">17. تهدف المعوقات الأمنية (كمفهوم للحماية) إلى منع:</div>
+        <div class="options">
+            <label><input type="radio" name="q17"> أ) دخول غير المخولين للنظام</label>
+            <label><input type="radio" name="q17"> ب) التبديل والسرقة</label>
+            <label><input type="radio" name="q17"> ج) كل ما ذكر صحيح</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a17')">إظهار الإجابة</button>
+        <div id="a17" class="answer-reveal">الإجابة الصحيحة: ج) كل ما ذكر صحيح.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">18. "سرقة الهوية" تعني:</div>
+        <div class="options">
+            <label><input type="radio" name="q18"> أ) سرقة جهاز الحاسوب</label>
+            <label><input type="radio" name="q18"> ب) استخدام المعلومات الشخصية لشخص ما دون معرفته</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a18')">إظهار الإجابة</button>
+        <div id="a18" class="answer-reveal">الإجابة الصحيحة: ب) استخدام المعلومات الشخصية لشخص ما دون معرفته.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">19. يشير مفهوم "الأمن" في نظم المعلومات إلى:</div>
+        <div class="options">
+            <label><input type="radio" name="q19"> أ) السياسات والإجراءات الفنية لحماية النظام</label>
+            <label><input type="radio" name="q19"> ب) زيادة سرعة الإنترنت</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a19')">إظهار الإجابة</button>
+        <div id="a19" class="answer-reveal">الإجابة الصحيحة: أ) السياسات والإجراءات الفنية لحماية النظام.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">20. المعوقات التي تتعلق بـ "تحسين خدمة العملاء وتحسين عمليات الشركة" تندرج تحت الجانب:</div>
+        <div class="options">
+            <label><input type="radio" name="q20"> أ) الثقافي (ثقافة الابتكار)</label>
+            <label><input type="radio" name="q20"> ب) الأمني</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a20')">إظهار الإجابة</button>
+        <div id="a20" class="answer-reveal">الإجابة الصحيحة: أ) الثقافي (ثقافة الابتكار).</div>
+    </div>
+
+    <div class="section-title">خامساً: أسئلة متنوعة (صواب/خطأ واختيار)</div>
+
+    <div class="question-card">
+        <div class="question-text">21. (صواب/خطأ) تشمل البنية التحتية التخزين المادي للأدوات التكنولوجية.</div>
+        <div class="options">
+            <label><input type="radio" name="q21"> أ) صواب</label>
+            <label><input type="radio" name="q21"> ب) خطأ</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a21')">إظهار الإجابة</button>
+        <div id="a21" class="answer-reveal">الإجابة الصحيحة: أ) صواب.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">22. أحد أهداف الحماية الأمنية هو:</div>
+        <div class="options">
+            <label><input type="radio" name="q22"> أ) ضمان استمرار الأخطاء البرمجية</label>
+            <label><input type="radio" name="q22"> ب) السلامة من التلف والسرقة</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a22')">إظهار الإجابة</button>
+        <div id="a22" class="answer-reveal">الإجابة الصحيحة: ب) السلامة من التلف والسرقة.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">23. (صواب/خطأ) مقاومة التغيير تعتبر من المعوقات التقنية (الفنية) وليست الثقافية.</div>
+        <div class="options">
+            <label><input type="radio" name="q23"> أ) صواب</label>
+            <label><input type="radio" name="q23"> ب) خطأ</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a23')">إظهار الإجابة</button>
+        <div id="a23" class="answer-reveal">الإجابة الصحيحة: ب) خطأ (تعتبر من المعوقات الثقافية).</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">24. (صواب/خطأ) انخفاض مستوى الكوادر الفنية يؤثر سلباً على تطبيق نظم المعلومات.</div>
+        <div class="options">
+            <label><input type="radio" name="q24"> أ) صواب</label>
+            <label><input type="radio" name="q24"> ب) خطأ</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a24')">إظهار الإجابة</button>
+        <div id="a24" class="answer-reveal">الإجابة الصحيحة: أ) صواب.</div>
+    </div>
+
+    <div class="question-card">
+        <div class="question-text">25. الشبكات تجعل تشابك الأجهزة وعملها مع بعضها أمراً:</div>
+        <div class="options">
+            <label><input type="radio" name="q25"> أ) مستحيلاً</label>
+            <label><input type="radio" name="q25"> ب) ممكناً ومتاحاً</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a25')">إظهار الإجابة</button>
+        <div id="a25" class="answer-reveal">الإجابة الصحيحة: ب) ممكناً ومتاحاً.</div>
+    </div>
+
+     <div class="question-card">
+        <div class="question-text">26. من الأمثلة على الجرائم التي تندرج تحت المعوقات الأمنية:</div>
+        <div class="options">
+            <label><input type="radio" name="q26"> أ) تعطل الطابعة</label>
+            <label><input type="radio" name="q26"> ب) استخدام وسائل مختلفة لسرقة البيانات</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a26')">إظهار الإجابة</button>
+        <div id="a26" class="answer-reveal">الإجابة الصحيحة: ب) استخدام وسائل مختلفة لسرقة البيانات.</div>
+    </div>
+
+     <div class="question-card">
+        <div class="question-text">27. (صواب/خطأ) الرسم البياني الدائري (Pie) ممتاز للمقارنة بين أرباح 10 سنوات متتالية.</div>
+        <div class="options">
+            <label><input type="radio" name="q27"> أ) صواب</label>
+            <label><input type="radio" name="q27"> ب) خطأ</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a27')">إظهار الإجابة</button>
+        <div id="a27" class="answer-reveal">الإجابة الصحيحة: ب) خطأ (الأفضل هو المنحنى Line).</div>
+    </div>
+
+     <div class="question-card">
+        <div class="question-text">28. تتطلب البنية التحتية لتكنولوجيا المعلومات وجود أجهزة مجهزة بـ:</div>
+        <div class="options">
+            <label><input type="radio" name="q28"> أ) وسائط مختلفة (Multimedia)</label>
+            <label><input type="radio" name="q28"> ب) معالجات مختلفة</label>
+            <label><input type="radio" name="q28"> ج) جميع ما ذكر</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a28')">إظهار الإجابة</button>
+        <div id="a28" class="answer-reveal">الإجابة الصحيحة: ج) جميع ما ذكر (حسب السياق العام للأجهزة).</div>
+    </div>
+
+     <div class="question-card">
+        <div class="question-text">29. الهدف من استخدام أدوات التكنولوجيا في "الأمن" هو:</div>
+        <div class="options">
+            <label><input type="radio" name="q29"> أ) زيادة التعقيد</label>
+            <label><input type="radio" name="q29"> ب) الحماية والسلامة من المخاطر</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a29')">إظهار الإجابة</button>
+        <div id="a29" class="answer-reveal">الإجابة الصحيحة: ب) الحماية والسلامة من المخاطر.</div>
+    </div>
+
+     <div class="question-card">
+        <div class="question-text">30. (صواب/خطأ) ثقافة الشركة (التنظيمية) تؤثر على مدى قبول الموظفين لاستخدام التكنولوجيا الجديدة.</div>
+        <div class="options">
+            <label><input type="radio" name="q30"> أ) صواب</label>
+            <label><input type="radio" name="q30"> ب) خطأ</label>
+        </div>
+        <button class="answer-btn" onclick="toggleAnswer('a30')">إظهار الإجابة</button>
+        <div id="a30" class="answer-reveal">الإجابة الصحيحة: أ) صواب.</div>
+    </div>
+
+    <footer>
+        <p>تم الإعداد بواسطة: قيس جازي</p>
+    </footer>
+</div>
+
+<script>
+    function toggleAnswer(id) {
+        var x = document.getElementById(id);
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+        }
+    }
+</script>
+
+</body>
+</html>
